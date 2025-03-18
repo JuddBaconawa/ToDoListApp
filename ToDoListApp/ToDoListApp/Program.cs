@@ -43,10 +43,10 @@ static void viewTask(List<string> tasks) {
 	Console.WriteLine("\nTask List: ");
 	if (tasks.Count == 0) {
 		Console.WriteLine("There are no tasks.");
-	} else {
+	} else {	
 		for (int i = 0; i < tasks.Count; i++) {
 			Console.WriteLine($"{i + 1}. {tasks[i]}");
-		}
+		} 	Console.WriteLine("\n");
 	}
 
 }
@@ -69,10 +69,13 @@ static void deleteTask(List<string> tasks) {
 	Console.WriteLine("Enter the number of task you want removed: ");
 
 	if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= tasks.Count) {
+        Console.WriteLine("Task " + (index) + ", removed from the list.");
 		tasks.RemoveAt(index - 1);
 		Console.WriteLine("Task removed from the list");
+		Console.WriteLine("\n");
 	} else {
 		Console.WriteLine("Invalid number.");
+		Console.WriteLine("\n");
 	}
 }
 
