@@ -68,7 +68,12 @@ static void deleteTask(List<string> tasks) {
 	viewTask(tasks);
 	Console.WriteLine("Enter the number of task you want removed: ");
 
-	if (int.TryParse)
+	if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= tasks.Count) {
+		tasks.RemoveAt(index - 1);
+		Console.WriteLine("Task removed from the list");
+	} else {
+		Console.WriteLine("Invalid number.");
+	}
 }
 
 
