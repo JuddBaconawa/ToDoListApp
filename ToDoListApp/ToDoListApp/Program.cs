@@ -63,6 +63,14 @@ static void addTask(List<string> tasks) {
 	}
 }
 
+//delete task method
+static void deleteTask(List<string> tasks) {
+	viewTask(tasks);
+	Console.WriteLine("Enter the number of task you want removed: ");
+
+	if (int.TryParse)
+}
+
 
 
 
