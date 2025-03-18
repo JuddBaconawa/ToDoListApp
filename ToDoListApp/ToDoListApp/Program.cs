@@ -20,11 +20,21 @@ while (running) {
 	//switch statement for the main menu options
 	switch (choice) {
 		case "1":
+			viewTask(task);
 		case "2":
+			addTask(task);
 		case "3":
+			deleteTask(task);
 		case "4":
+			running = false;
+			Console.WriteLine("Goodbye!");
+			break;
 		default:
+			Console.WriteLine("Invalid input!");
+			break;
 	}
 }
+
+
 
 
