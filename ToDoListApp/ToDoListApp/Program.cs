@@ -38,6 +38,19 @@ while (running) {
 	}
 }
 
+//view task method
+static void viewTask(List<string> tasks) {
+	Console.WriteLine("\nTask List: ");
+	if (tasks.Count == 0) {
+		Console.WriteLine("There are no tasks.");
+	} else {
+		for (int i = 0; i < tasks.Count; i++) {
+			Console.WriteLine($"{i + 1}. {tasks[i]}");
+		}
+	}
+
+}
+
 //add task method
 static void addTask(List<string> tasks) {
 	Console.WriteLine("Enter a new task: ");
@@ -49,6 +62,8 @@ static void addTask(List<string> tasks) {
 		Console.WriteLine("The task cannot be empty.");
 	}
 }
+
+
 
 
 
