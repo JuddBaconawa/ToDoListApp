@@ -21,10 +21,13 @@ while (running) {
 	switch (choice) {
 		case "1":
 			viewTask(task);
+			break;
 		case "2":
 			addTask(task);
+			break;
 		case "3":
 			deleteTask(task);
+			break;
 		case "4":
 			running = false;
 			Console.WriteLine("Goodbye!");
@@ -32,6 +35,18 @@ while (running) {
 		default:
 			Console.WriteLine("Invalid input!");
 			break;
+	}
+}
+
+//add task method
+static void addTask(List<string> tasks) {
+	Console.WriteLine("Enter a new task: ");
+	string task = Console.ReadLine();
+	if (!string.IsNullOrWhiteSpace(task)) {
+		tasks.Add(task);
+		Console.WriteLine("Task added!");
+	} else {
+		Console.WriteLine("The task cannot be empty.");
 	}
 }
 
